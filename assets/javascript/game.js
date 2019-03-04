@@ -71,15 +71,13 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
-            break
+        break
         case 1:
         iframe = document.querySelector('iframe');
         iframe.src = 'https://www.youtube.com/watch?v=Q6eBJjdca14'
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         case 2:
         iframe = document.querySelector('iframe');
 
@@ -87,7 +85,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         case 3:
         iframe = document.querySelector('iframe');
@@ -96,7 +93,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         case 4:
         iframe = document.querySelector('iframe');
@@ -105,7 +101,7 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // // document.querySelector(".videos").appendChild(iframe);
+        
         break
         case 5:
         iframe = document.querySelector('iframe');
@@ -114,7 +110,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         case 6:
         iframe = document.querySelector('iframe'); 
@@ -122,7 +117,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         case 7:
         iframe = document.querySelector('iframe'); 
@@ -130,7 +124,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         case 8:
         iframe = document.querySelector('iframe');
@@ -139,7 +132,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         case 9:
         iframe = document.querySelector('iframe');
@@ -148,7 +140,6 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
         
         case 10:
@@ -157,17 +148,14 @@ const genCiv = () => {
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
 
         case 11:
         iframe = document.querySelector('iframe');
-
         iframe.src = 'https://www.youtube.com/embed/3yb1jBTwMeI?start=309'
         iframe.frameborder='0'
         iframe.allow =  "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         iframe.allowFullscreen = true;
-        // document.querySelector(".videos").appendChild(iframe);
         break
     }
 
@@ -199,7 +187,6 @@ const genCiv = () => {
             document.querySelector('ul').append(item)
             item.setAttribute('id', `letter${i}`)
             document.getElementById(`letter${i}`).textContent = "_";
-            // .innerHTML
 
         }
     }
@@ -207,7 +194,6 @@ const genCiv = () => {
 
 const reset = () => {
     resetParent = document.querySelector("#myList")
-
     wrongList = []
     document.querySelector('#used').textContent = `Already Used: ${wrongList}`
     chances = 5
@@ -225,7 +211,6 @@ const foo = () => {
 
     genCiv()
 
-
     // Whenever a key is pressed, log to the console the key pressed.
     document.onkeyup = e => {
 
@@ -236,7 +221,7 @@ const foo = () => {
             if (alreadyUsed.indexOf(e.key.toUpperCase()) === -1) {
 
                 alreadyUsed.push(e.key.toUpperCase())
-                console.log(alreadyUsed)
+                //console.log(alreadyUsed)
 
                 if (chances > 0) {
 
@@ -245,7 +230,7 @@ const foo = () => {
                         document.querySelector('#guesses').textContent = `Guesses Remaining: ${chances}`
                         wrongList.push(` ${e.key.toUpperCase()}`)
                         document.querySelector('#used').textContent = `Already Used: ${wrongList}`
-                        console.log(wrongList)
+                       // console.log(wrongList)
                     }
 
                     else {
@@ -265,7 +250,7 @@ const foo = () => {
                             document.getElementById(`letter${genLetterPosition}`).textContent = letter
 
                             totalCorrect += 1
-                            console.log(totalCorrect)
+                            //console.log(totalCorrect)
 
                         }
 
@@ -278,7 +263,7 @@ const foo = () => {
                             }
 
                             totalCorrect += mLetters.length
-                            console.log(totalCorrect)
+                            //console.log(totalCorrect)
                         }
 
                         if (totalCorrect === autoGenCiv.length) {
@@ -300,7 +285,7 @@ const foo = () => {
             }
 
             else {
-                console.log("Letter Already Used")
+                //console.log("Letter Already Used")
             }
         }
 
