@@ -1,4 +1,8 @@
 
+/////////----I HAVE CONSOLE LOGGED THE ANSWERS SO THAT YOU CAN TEST THE CODE WITHOUT STRUGGLING WITH THE WORDS------///////
+
+
+
 //variables blocking repetition of letters and ensuring repetition does not affect number of chances
 let preventRepetition
 let chances = 5
